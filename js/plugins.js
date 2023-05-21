@@ -444,7 +444,6 @@ box1Generate.addEventListener("click", function(){
 
 
     let css = `.${classname[0].value}{position:relative; border: 1px solid red;max-width: 320px; width:100%; border-radius:10px; padding: 20px 20px 100px;text-align:center;}
-    .${classname[0].value}:before{position:absolute;left: 0; top: 20px; right:0; transform: none;margin:auto;max-width:fit-content;}
     .${classname[0].value} figure{ max-width:fit-content; width:100%; margin:0 auto 20px;}
     .${classname[0].value} figure img{ width:100%; border-radius:50%;}
     .${classname[0].value} .serv_info{ }
@@ -458,8 +457,8 @@ box1Generate.addEventListener("click", function(){
     
     if(before[0].checked == true)
     {
-        css += `.${classname[0].value}before{position:absolute;left: 0; top: 20px; right:0; transform: none;}
-    .${classname[0].value}:before{content:url(images/icons/${classname[0].value}.png);}`
+        css += `.${classname[0].value}before{position:absolute;left: 0; top: 20px; right:0; transform: none; content:url(images/icons/${classname[0].value}.png);}
+    `
     
     }
 
