@@ -1,0 +1,14 @@
+.form-control:not(:placeholder-shown){ box-shadow: 0 0 10px rgba(0, 128, 0, 0.425); }
+.form-control{ box-shadow: 0 0 10px rgba(255, 0, 0, 0.445); }
+
+textarea {box-shadow: none;resize: none;height: 200px !important;margin-top: 20px;}
+
+.row { width: 100%; }
+
+.card { margin-bottom: 20px; }
+
+.form-check { min-height: 2.5rem; }
+.form-switch .form-check-input { height: 2em; }
+.form-switch .form-check-input { width: 4em; }
+
+.card-img, .card-img-top { height: 225px; }
