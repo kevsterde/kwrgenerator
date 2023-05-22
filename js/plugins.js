@@ -134,6 +134,18 @@ for (let i = 0; i < 4; i++)
         ;
 
 
+    for(let i = 0; i < 3; i++)
+    {
+       
+        result[i].addEventListener("click", function(){
+            result[i].select();
+            result[i].setSelectionRange(0,9999);
+            document.execCommand('copy');
+
+    });
+    }
+ 
+
 
 });
 
@@ -267,7 +279,16 @@ for (let i = 0; i < 4; i++)
 
 
         ;
-
+        for(let i = 0; i < 3; i++)
+        {
+           
+            result[i].addEventListener("click", function(){
+                result[i].select();
+                result[i].setSelectionRange(0,9999);
+                document.execCommand('copy');
+    
+        });
+        }
 
 
 });
@@ -391,7 +412,16 @@ for (let i = 0; i < 3; i++)
 
         ;
 
-
+        for(let i = 0; i < 3; i++)
+        {
+           
+            result[i].addEventListener("click", function(){
+                result[i].select();
+                result[i].setSelectionRange(0,9999);
+                document.execCommand('copy');
+    
+        });
+        }
 
 });
 
@@ -480,6 +510,19 @@ for (let i = 0; i < 1; i++)
     result[1].value = css;
     result[2].value = register(smallvalue[0].value  + " " + heading2[0].value + " " + span[0].value, `${classname[0].value}`) 
         ;
+
+
+        for(let i = 0; i < 3; i++)
+        {
+           
+            result[i].addEventListener("click", function(){
+                result[i].select();
+                result[i].setSelectionRange(0,9999);
+                document.execCommand('copy');
+    
+        });
+        }
+
 
 
 });
@@ -604,7 +647,16 @@ for (let i = 0; i < 2; i++)
 
         ;
 
-
+        for(let i = 0; i < 3; i++)
+        {
+           
+            result[i].addEventListener("click", function(){
+                result[i].select();
+                result[i].setSelectionRange(0,9999);
+                document.execCommand('copy');
+    
+        });
+        }
 
 });
 
