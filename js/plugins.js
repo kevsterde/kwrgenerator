@@ -361,12 +361,12 @@ for (let i = 0; i < 3; i++)
 
         if(paragraph[i].value == "")
         {
-            content[i] = "\t" + figure(`serv${i+1}`, altvalue[i].value) + '\t<div class="info">' + "\n\t\t" + widget(`three_boxes_box${i+1}`) + "\n\n\t\t" + 
+            content[i] = "\t" + figure(`three_boxes_box${i+1}`, altvalue[i].value) + '\t<div class="info">' + "\n\t\t" + widget(`three_boxes_box${i+1}`) + "\n\n\t\t" + 
             h2(heading2[i].value,smallvalue[i].value ,span[i].value) + "\n\t\t" + a_class(_href[i], buttons[i].value, "btn_style") + '\n\t\t</div>';
             content[i] = section(`three_boxes_box${i+1}`, content[i]);
         }
         else{
-            content[i] = "\t" + figure(`serv${i+1}`, altvalue[i].value) +'\t<div class="info">' + "\n\t\t" + widget(`three_boxes_box${i+1}`) + "\n\n\t\t" + 
+            content[i] = "\t" + figure(`three_boxes_box${i+1}`, altvalue[i].value) +'\t<div class="info">' + "\n\t\t" + widget(`three_boxes_box${i+1}`) + "\n\n\t\t" + 
             h2(heading2[i].value,smallvalue[i].value ,span[i].value) + "\n\t\t" + p(paragraph[i].value) + "\n\t\t" + a_class(_href[i], buttons[i].value, "btn_style") + '\n\t\t</div>';
             content[i] = section(`three_boxes_box${i+1}`, content[i]);
         }
