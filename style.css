@@ -4,7 +4,7 @@
 textarea {box-shadow: none;resize: none;height: 200px !important;margin-top: 20px;}
 
 .row { width: 100%; }
-
+.container{padding-top: 20px;}
 .card { margin-bottom: 20px; }
 
 .form-check { min-height: 2.5rem; }

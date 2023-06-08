@@ -17,40 +17,41 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;} body {line-height: 1;} ul {list-style: none;} blockquote, q {quotes: none;} blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;} table {border-collapse: collapse;border-spacing: 0;} button, html input[type=button], input[type=reset], input[type=submit] { -webkit-appearance: button; cursor: pointer; } input:not([type='radio']):not([type='checkbox']), textarea, select{-webkit-appearance: none;} form, label {-webkit-text-size-adjust: 100%;} mark {background-color: transparent;} /* end reset */
 
-.empty{position:relative; border: 1px solid red;max-width: 320px; width:100%; border-radius:10px; padding: 20px 20px 100px;text-align:center;}
-    .empty:before{position:absolute;left: 0; top: 20px; right:0; transform: none;margin:auto;max-width:fit-content;}
-    .empty figure{ max-width:fit-content; width:100%; margin:0 auto 20px;}
-    .empty figure img{ width:100%; border-radius:50%;}
-    .empty .serv_info{ }
-    .empty h2 {margin:0 0 20px;}
-    .empty h2 small{display:block;}
-    .empty h2 span{display:block;}
-    .empty p{}
-    .empty a{line-height: 50px; max-width: fit-content; position: absolute; bottom: 24px; left: 0; right: 0; margin: auto;}
-    .empty a:hover{}   
-    .emptybefore{position:absolute;left: 0; top: 20px; right:0; transform: none;}
-    .empty:before{content:url(images/icons/two_boxes_box2.png);}
+
+.testimonial{display: flex;justify-content: space-between;}
+    .testimonial section{min-height: 278px;max-width: 374px;width: 100%;margin: auto;padding: 91px 42px 76px;text-align: center;position: relative;margin-bottom: 81px;background: #e5e5e5;}
+    .testimonial section:before{content:url(images/icons/testi.png); position:absolute;left: 44px;top: 48px;}
+    .testimonial section p{}
+    .testimonial section h2{font-size: 24px;margin-top: 16px;color: #4d4d4d;}
+    .testimonial section figure{border-radius: 50%;overflow: hidden;width: 141px;aspect-ratio: 1/1;position: absolute;bottom: -75px;left: 0;right: 0;margin: auto;}
+    .testimonial section figure img{}
     
     </style>
 </head>
 <body>
     <div class="wrapper">
       
-        <div class="empty">
-            <figure><img src="images/two_boxes_box2.png" alt="asd"></figure>
-            <div class="serv_info">
-            <?php dynamic_sidebar('empty');?>
-    
-            <h2><small>Small</small> Heading2 <span>Span</span></h2>
-            <p>Paragraph</p>
-            <a href="small-heading2-span" class="btn_style">Button Name</a>
-            </div>
         
-    </div>  
-
-
-
-
+        <div class="testimonial owl-carousel">
+            <section>
+                <p>We are excited to post contents on the website.</p>
+                <h2>Dummy Name</h2>
+            
+                <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/1.png" alt="dummy"></figure>
+            </section>
+            <section>
+                <p>We are excited to post contents on the website.</p>
+                <h2>Dummy Name</h2>
+            
+                <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/2.png" alt="dummy"></figure>
+            </section>
+            <section>
+                <p>We are excited to post contents on the website.</p>
+                <h2>Dummy Name</h2>
+            
+                <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/3.png" alt="dummy"></figure>
+            </section>
+        </div>
     </div>
 </body>
 </html>

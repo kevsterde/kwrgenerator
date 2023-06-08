@@ -1,4 +1,8 @@
 
+var nob = document.getElementById("nob").value;
+
+
+
 
 const show = document.querySelectorAll(".card-img-top");
 show.forEach(item =>{
@@ -21,22 +25,22 @@ servGenerate.addEventListener("click", function () {
     const paragraph = document.querySelectorAll("#" + parent + " .row_p input");
     const buttons = document.querySelectorAll("#" + parent + " .row_buttons input");
     const result = document.querySelectorAll("#" + parent + " .row_result textarea");
-
+ 
 
     var _href = [];
 
     for (let i = 0; i < 4; i++) {
         if (smallvalue[i].value == "") {
             if (span[i].value == "") {
-                _href[i] = heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
+                _href[i] = nob +heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
             }
             else {
-                _href[i] = heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
+                _href[i] = nob +heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
                 span[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
             }
         }
         else {
-            _href[i] = smallvalue[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
+            _href[i] = nob +smallvalue[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
             heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
             span[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
         }
@@ -85,12 +89,12 @@ for (let i = 0; i < 4; i++)
 
         if(paragraph[i].value == "")
             {
-                content[i] = '\t<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
+                content[i] = '\n\t<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
                 h2(heading2[i].value,smallvalue[i].value ,span[i].value) + "\n\t\t" + a_class(_href[i], buttons[i].value, "btn_style") + '\n\t\t</div>';
                 content[i] = section(`serv_box${i+1}`, content[i]);
             }
             else{
-                content[i] = '\t<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
+                content[i] = '\n\t<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
                 h2(heading2[i].value,smallvalue[i].value ,span[i].value) + "\n\t\t" + p(paragraph[i].value) + "\n\t\t" + a_class(_href[i], buttons[i].value, "btn_style") + '\n\t\t</div>';
                 content[i] = section(`serv_box${i+1}`, content[i]);
             }
@@ -101,12 +105,12 @@ for (let i = 0; i < 4; i++)
 
         if(paragraph[i].value == "")
         {
-            content[i] = "\t" + figure(`serv${i+1}`, altvalue[i].value) + '\t<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
+            content[i] = "\t" + figure(`serv${i+1}`, altvalue[i].value) + '\n\t<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
             h2(heading2[i].value,smallvalue[i].value ,span[i].value) + "\n\t\t" + a_class(_href[i], buttons[i].value, "btn_style") + '\n\t\t</div>';
             content[i] = section(`serv_box${i+1}`, content[i]);
         }
         else{
-            content[i] = "\t" + figure(`serv${i+1}`, altvalue[i].value) +'\t<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
+            content[i] = "\t" + figure(`serv${i+1}`, altvalue[i].value) +'\n\t<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
             h2(heading2[i].value,smallvalue[i].value ,span[i].value) + "\n\t\t" + p(paragraph[i].value) + "\n\t\t" + a_class(_href[i], buttons[i].value, "btn_style") + '\n\t\t</div>';
             content[i] = section(`serv_box${i+1}`, content[i]);
         }
@@ -169,15 +173,15 @@ servReverseGenerate.addEventListener("click", function () {
     for (let i = 0; i < 4; i++) {
         if (smallvalue[i].value == "") {
             if (span[i].value == "") {
-                _href[i] = heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
+                _href[i] = nob + heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
             }
             else {
-                _href[i] = heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
+                _href[i] =nob + heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
                 span[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
             }
         }
         else {
-            _href[i] = smallvalue[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
+            _href[i] = nob + smallvalue[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
             heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
             span[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
         }
@@ -226,12 +230,12 @@ for (let i = 0; i < 4; i++)
 
         if(paragraph[i].value == "")
             {
-                content[i] = '\t<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
+                content[i] = '\n\t<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
                 h2(heading2[i].value,smallvalue[i].value ,span[i].value) + "\n\t\t" + a_class(_href[i], buttons[i].value, "btn_style") + '\n\t\t</div>';
                 content[i] = section(`serv_box${i+1}`, content[i]);
             }
             else{
-                content[i] = '\t<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
+                content[i] = '\n\t<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
                 h2(heading2[i].value,smallvalue[i].value ,span[i].value) + "\n\t\t" + p(paragraph[i].value) + "\n\t\t" + a_class(_href[i], buttons[i].value, "btn_style") + '\n\t\t</div>';
                 content[i] = section(`serv_box${i+1}`, content[i]);
             }
@@ -242,14 +246,14 @@ for (let i = 0; i < 4; i++)
 
         if(paragraph[i].value == "")
         {
-            content[i] =  '\t<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
+            content[i] =  '\t\n\n<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
             h2(heading2[i].value,smallvalue[i].value ,span[i].value) + "\n\t\t" + a_class(_href[i], buttons[i].value, "btn_style") + '\n\t\t</div>'
             + "\n\t" + figure(`serv${i+1}`, altvalue[i].value) 
             ;
             content[i] = section(`serv_box${i+1}`, content[i]);
         }
         else{
-            content[i] = '\t<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
+            content[i] = '\t\n\n<div class="serv_info">' + "\n\t\t" + widget(`serv_box${i+1}`) + "\n\n\t\t" + 
             h2(heading2[i].value,smallvalue[i].value ,span[i].value) + "\n\t\t" + p(paragraph[i].value) + "\n\t\t" + a_class(_href[i], buttons[i].value, "btn_style") + '\n\t\t</div>'  + "\n\t" + figure(`serv${i+1}`, altvalue[i].value) 
             
             
@@ -312,15 +316,15 @@ three_boxesGenerate.addEventListener("click", function () {
     for (let i = 0; i < 3; i++) {
         if (smallvalue[i].value == "") {
             if (span[i].value == "") {
-                _href[i] = heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
+                _href[i] = nob+ heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
             }
             else {
-                _href[i] = heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
+                _href[i] = nob+ heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
                 span[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
             }
         }
         else {
-            _href[i] = smallvalue[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
+            _href[i] = nob+ smallvalue[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
             heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
             span[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
         }
@@ -426,6 +430,85 @@ for (let i = 0; i < 3; i++)
 });
 
 
+
+
+// TESTIMONIAL 1
+
+const testi1 = () => {
+    
+    const parent = document.querySelector("#test1").id;
+
+    const result = document.querySelectorAll("#" + parent + " .row_result textarea");
+
+
+    result[0].value =`<div class="testimonial owl-carousel">
+    <section>
+        <p>We are excited to post contents on the website.</p>
+        <h2>Dummy Name</h2>
+    
+        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/1.png" alt="dummy"></figure>
+    </section>
+    <section>
+        <p>We are excited to post contents on the website.</p>
+        <h2>Dummy Name</h2>
+    
+        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/2.png" alt="dummy"></figure>
+    </section>
+    <section>
+        <p>We are excited to post contents on the website.</p>
+        <h2>Dummy Name</h2>
+    
+        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/3.png" alt="dummy"></figure>
+    </section>
+</div>`
+
+
+    result[1].value = `.testimonial{display: flex;justify-content: space-between;}
+    .testimonial section{min-height: 278px;max-width: 374px;width: 100%;margin: auto;padding: 91px 42px 76px;text-align: center;position: relative;margin-bottom: 81px;background: #e5e5e5;}
+    .testimonial section:before{content:url(images/icons/testi.png); position:absolute;left: 44px;top: 48px;}
+    .testimonial section p{}
+    .testimonial section h2{font-size: 24px;margin-top: 16px;color: #4d4d4d;}
+    .testimonial section figure{border-radius: 50%;overflow: hidden;width: 141px;aspect-ratio: 1/1;position: absolute;bottom: -75px;left: 0;right: 0;margin: auto;}
+    .testimonial section figure img{}`
+
+    
+    result[2].value = `$(".owl-carousel").owlCarousel({
+        items: 3,
+        nav: false,
+        dots: false,
+        loop: true,
+        margin:10,
+        responsive : {
+        291 : {
+            items:1
+        },
+        601 : {
+            items:2
+        },
+        1111 : {items:3	}
+    }
+    });
+    `
+
+        
+
+        for(let i = 0; i < 3; i++)
+        {
+           
+            result[i].addEventListener("click", function(){
+                result[i].select();
+                result[i].setSelectionRange(0,9999);
+                document.execCommand('copy');
+    
+        });
+        }
+
+}
+testi1();
+
+
+
+
 const box1Generate = document.querySelector("#box1 .btn-generate");
 box1Generate.addEventListener("click", function(){
 
@@ -453,15 +536,15 @@ box1Generate.addEventListener("click", function(){
     for (let i = 0; i < 1; i++) {
         if (smallvalue[i].value == "") {
             if (span[i].value == "") {
-                _href[i] = heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
+                _href[i] = nob + heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
             }
             else {
-                _href[i] = heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
+                _href[i] = nob + heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
                 span[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
             }
         }
         else {
-            _href[i] = smallvalue[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
+            _href[i] = nob + smallvalue[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
             heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
             span[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
         }
@@ -548,15 +631,15 @@ twoBoxesGenerate.addEventListener("click", function () {
     for (let i = 0; i < 2; i++) {
         if (smallvalue[i].value == "") {
             if (span[i].value == "") {
-                _href[i] = heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
+                _href[i] = nob + heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
             }
             else {
-                _href[i] = heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
+                _href[i] =nob +  heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
                 span[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
             }
         }
         else {
-            _href[i] = smallvalue[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
+            _href[i] = nob + smallvalue[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
             heading2[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase() + "-" + 
             span[i].value.replace(/\//g, '-or-').replace(/&/g, '-and-').replace(/\s+/g, '-').toLowerCase();
         }
@@ -578,7 +661,7 @@ twoBoxesGenerate.addEventListener("click", function () {
         .two_boxes section .info{}
         .two_boxes section h2{font-size:20px; font-weight:400;margin-bottom: 20px;}
         .two_boxes section h2 small{display:block;}
-        .three_boxes section h2 span{display:block;}
+        .two_boxes section h2 span{display:block;}
         .two_boxes section p{}
         .two_boxes section a{position:absolute; bottom:10px; left:0; right:0; margin:auto; line-height: 50px;  }
         .two_boxes section a:hover{}    
