@@ -17,14 +17,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;} body {line-height: 1;} ul {list-style: none;} blockquote, q {quotes: none;} blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;} table {border-collapse: collapse;border-spacing: 0;} button, html input[type=button], input[type=reset], input[type=submit] { -webkit-appearance: button; cursor: pointer; } input:not([type='radio']):not([type='checkbox']), textarea, select{-webkit-appearance: none;} form, label {-webkit-text-size-adjust: 100%;} mark {background-color: transparent;} /* end reset */
 
-
-.testimonial{display: flex;justify-content: space-between;}
-    .testimonial section{min-height: 278px;max-width: 374px;width: 100%;margin: auto;padding: 91px 42px 76px;text-align: center;position: relative;margin-bottom: 81px;background: #e5e5e5;}
-    .testimonial section:before{content:url(images/icons/testi.png); position:absolute;left: 44px;top: 48px;}
-    .testimonial section p{}
-    .testimonial section h2{font-size: 24px;margin-top: 16px;color: #4d4d4d;}
-    .testimonial section figure{border-radius: 50%;overflow: hidden;width: 141px;aspect-ratio: 1/1;position: absolute;bottom: -75px;left: 0;right: 0;margin: auto;}
-    .testimonial section figure img{}
+.three_boxes{display: flex; gap: 10px; justify-content: space-between;}
+    .three_boxes section{width: 33%; border:1px solid red;position:relative; max-width:400px;text-align:center; padding: 20px 20px 60px;}
+    .three_boxes section.three_boxes_box1{}
+    .three_boxes section.three_boxes_box2{}
+    .three_boxes section.three_boxes_box3{}
+    .three_boxes section figure{ max-width:fit-content; width:100%; margin:0 auto 0;}
+    .three_boxes section figure img{ width:100%; border-radius:50%;}
+    .three_boxes section .info{}
+    .three_boxes section h2{font-size:20px; font-weight:400;margin-bottom: 20px;}
+    .three_boxes section h2 small{display:block;}
+    .three_boxes section h2 span{display:block;}
+    .three_boxes section p{}
+    .three_boxes section a{position:absolute; bottom:10px; left:0; right:0; margin:auto; line-height: 50px;  }
+    .three_boxes section a:hover{}    
     
     </style>
 </head>
@@ -32,24 +38,30 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     <div class="wrapper">
       
         
-        <div class="testimonial owl-carousel">
-            <section>
-                <p>We are excited to post contents on the website.</p>
-                <h2>Dummy Name</h2>
-            
-                <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/1.png" alt="dummy"></figure>
+        <div class="three_boxes">
+            <section class="three_boxes_box1">
+                <div class="info">
+                <?php dynamic_sidebar('three_boxes_box1');?>
+        
+                <h2></h2>
+                <a href="" class="btn_style"></a>
+                </div>
             </section>
-            <section>
-                <p>We are excited to post contents on the website.</p>
-                <h2>Dummy Name</h2>
-            
-                <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/2.png" alt="dummy"></figure>
+            <section class="three_boxes_box2">
+                <div class="info">
+                <?php dynamic_sidebar('three_boxes_box2');?>
+        
+                <h2></h2>
+                <a href="" class="btn_style"></a>
+                </div>
             </section>
-            <section>
-                <p>We are excited to post contents on the website.</p>
-                <h2>Dummy Name</h2>
-            
-                <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/3.png" alt="dummy"></figure>
+            <section class="three_boxes_box3">
+                <div class="info">
+                <?php dynamic_sidebar('three_boxes_box3');?>
+        
+                <h2></h2>
+                <a href="" class="btn_style"></a>
+                </div>
             </section>
         </div>
     </div>

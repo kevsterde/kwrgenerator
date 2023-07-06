@@ -446,19 +446,19 @@ const testi1 = () => {
         <p>We are excited to post contents on the website.</p>
         <h2>Dummy Name</h2>
     
-        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/1.png" alt="dummy"></figure>
+        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/1.webp" alt="dummy"></figure>
     </section>
     <section>
         <p>We are excited to post contents on the website.</p>
         <h2>Dummy Name</h2>
     
-        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/2.png" alt="dummy"></figure>
+        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/2.webp" alt="dummy"></figure>
     </section>
     <section>
         <p>We are excited to post contents on the website.</p>
         <h2>Dummy Name</h2>
     
-        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/3.png" alt="dummy"></figure>
+        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/3.webp" alt="dummy"></figure>
     </section>
 </div>`
 
@@ -909,11 +909,11 @@ function section(classname, content) {
 function figure(src, alt) {
 
     if (alt == '') {
-        return `<figure><img src="<?php bloginfo('template_url');?>/images/` + src + `.png" alt="xxxxxxxxxxxxxxxxxx_ADD_ALT_HERE_xxxxxxxxxxxxxxxxxx"></figure>`;
+        return `<figure><img src="<?php bloginfo('template_url');?>/images/` + src + `.webp" alt="xxxxxxxxxxxxxxxxxx_ADD_ALT_HERE_xxxxxxxxxxxxxxxxxx"></figure>`;
     }
 
 
-    return `<figure><img src="<?php bloginfo('template_url');?>/images/` + src + `.png" alt="` + alt + `"></figure>`;
+    return `<figure><img src="<?php bloginfo('template_url');?>/images/` + src + `.webp" alt="` + alt + `"></figure>`;
 }
 
 
