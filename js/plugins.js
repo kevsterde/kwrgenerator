@@ -1,6 +1,7 @@
 
-var nob = document.getElementById("nob").value;
 
+const nob = document.querySelector("#nob").value;
+console.log(nob);
 
 
 
@@ -446,19 +447,19 @@ const testi1 = () => {
         <p>We are excited to post contents on the website.</p>
         <h2>Dummy Name</h2>
     
-        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/1.webp" alt="dummy"></figure>
+        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/1.jpg" alt="dummy"></figure>
     </section>
     <section>
         <p>We are excited to post contents on the website.</p>
         <h2>Dummy Name</h2>
     
-        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/2.webp" alt="dummy"></figure>
+        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/2.jpg" alt="dummy"></figure>
     </section>
     <section>
         <p>We are excited to post contents on the website.</p>
         <h2>Dummy Name</h2>
     
-        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/3.webp" alt="dummy"></figure>
+        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/3.jpg" alt="dummy"></figure>
     </section>
 </div>`
 
@@ -570,7 +571,7 @@ box1Generate.addEventListener("click", function(){
     
     if(before[0].checked == true)
     {
-        css += `.${classname[0].value}before{position:absolute;left: 0; top: 20px; right:0; transform: none; content:url(images/icons/${classname[0].value}.png);}
+        css += `.${classname[0].value}:before{position:absolute;left: 0; top: 20px; right:0; transform: none; content:url(images/icons/${classname[0].value}.png);}
     `
     
     }
@@ -805,7 +806,7 @@ function register(name, id) {
         'name' => __( '${name}', 'twentyten' ),
         'id' => '${id}',
         'description' => __( 'The primary widget area', 'twentyten' ),
-        'before_widget' => '<div class="widget-container %2s">',
+        'before_widget' => '<div class="widget-container %2$s">',
         'after_widget' => '</div>',
         'before_title' => '',
         'after_title' => '',
@@ -909,11 +910,11 @@ function section(classname, content) {
 function figure(src, alt) {
 
     if (alt == '') {
-        return `<figure><img src="<?php bloginfo('template_url');?>/images/` + src + `.webp" alt="xxxxxxxxxxxxxxxxxx_ADD_ALT_HERE_xxxxxxxxxxxxxxxxxx"></figure>`;
+        return `<figure><img src="<?php bloginfo('template_url');?>/images/` + src + `.jpg" alt="xxxxxxxxxxxxxxxxxx_ADD_ALT_HERE_xxxxxxxxxxxxxxxxxx"></figure>`;
     }
 
 
-    return `<figure><img src="<?php bloginfo('template_url');?>/images/` + src + `.webp" alt="` + alt + `"></figure>`;
+    return `<figure><img src="<?php bloginfo('template_url');?>/images/` + src + `.jpg" alt="` + alt + `"></figure>`;
 }
 
 
