@@ -73,10 +73,10 @@ servGenerate.addEventListener("click", function () {
     if(before[0].checked == true)
     {
         css += `.serv_boxes section:before{position:absolute;left: 0; top: 20px; right:0; transform: none;margin:auto;max-width:fit-content;}
-    .serv_boxes section.serv_box1:before{content:url(images/icons/serv1.png);}
-    .serv_boxes section.serv_box2:before{content:url(images/icons/serv2.png);}
-    .serv_boxes section.serv_box3:before{content:url(images/icons/serv3.png);}
-    .serv_boxes section.serv_box4:before{content:url(images/icons/serv4.png);}`
+    .serv_boxes section.serv_box1:before{content:url(images/icons/serv1.webp);}
+    .serv_boxes section.serv_box2:before{content:url(images/icons/serv2.webp);}
+    .serv_boxes section.serv_box3:before{content:url(images/icons/serv3.webp);}
+    .serv_boxes section.serv_box4:before{content:url(images/icons/serv4.webp);}`
     }
 
 
@@ -214,10 +214,10 @@ servReverseGenerate.addEventListener("click", function () {
     if(before[0].checked == true)
     {
         css += `.serv_boxes section:before{position:absolute;left: 0; top: 20px; right:0; transform: none;margin:auto;max-width:fit-content;}
-    .serv_boxes section.serv_box1:before{content:url(images/icons/serv1.png);}
-    .serv_boxes section.serv_box2:before{content:url(images/icons/serv2.png);}
-    .serv_boxes section.serv_box3:before{content:url(images/icons/serv3.png);}
-    .serv_boxes section.serv_box4:before{content:url(images/icons/serv4.png);}`
+    .serv_boxes section.serv_box1:before{content:url(images/icons/serv1.webp);}
+    .serv_boxes section.serv_box2:before{content:url(images/icons/serv2.webp);}
+    .serv_boxes section.serv_box3:before{content:url(images/icons/serv3.webp);}
+    .serv_boxes section.serv_box4:before{content:url(images/icons/serv4.webp);}`
     }
 
 
@@ -356,9 +356,9 @@ three_boxesGenerate.addEventListener("click", function () {
     if(before[0].checked == true)
     {
         css += `.three_boxes section:before{position:absolute;left: 0; top: 20px; right:0; transform: none;}
-    .three_boxes section.three_boxes_box1:before{content:url(images/icons/three_boxes_box1.png);}
-    .three_boxes section.three_boxes_box2:before{content:url(images/icons/three_boxes_box2.png);}
-    .three_boxes section.three_boxes_box3:before{content:url(images/icons/three_boxes_box3.png);}`
+    .three_boxes section.three_boxes_box1:before{content:url(images/icons/three_boxes_box1.webp);}
+    .three_boxes section.three_boxes_box2:before{content:url(images/icons/three_boxes_box2.webp);}
+    .three_boxes section.three_boxes_box3:before{content:url(images/icons/three_boxes_box3.webp);}`
     }
 
 
@@ -447,26 +447,26 @@ const testi1 = () => {
         <p>We are excited to post contents on the website.</p>
         <h2>Dummy Name</h2>
     
-        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/1.jpg" alt="dummy"></figure>
+        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/1.webp" alt="dummy"></figure>
     </section>
     <section>
         <p>We are excited to post contents on the website.</p>
         <h2>Dummy Name</h2>
     
-        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/2.jpg" alt="dummy"></figure>
+        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/2.webp" alt="dummy"></figure>
     </section>
     <section>
         <p>We are excited to post contents on the website.</p>
         <h2>Dummy Name</h2>
     
-        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/3.jpg" alt="dummy"></figure>
+        <figure><img src="<?php bloginfo('template_url');?>/images/testimonial/3.webp" alt="dummy"></figure>
     </section>
 </div>`
 
 
     result[1].value = `.testimonial{display: flex;justify-content: space-between;}
     .testimonial section{min-height: 278px;max-width: 374px;width: 100%;margin: auto;padding: 91px 42px 76px;text-align: center;position: relative;margin-bottom: 81px;background: #e5e5e5;}
-    .testimonial section:before{content:url(images/icons/testi.png); position:absolute;left: 44px;top: 48px;}
+    .testimonial section:before{content:url(images/icons/testi.webp); position:absolute;left: 44px;top: 48px;}
     .testimonial section p{}
     .testimonial section h2{font-size: 24px;margin-top: 16px;color: #4d4d4d;}
     .testimonial section figure{border-radius: 50%;overflow: hidden;width: 141px;aspect-ratio: 1/1;position: absolute;bottom: -75px;left: 0;right: 0;margin: auto;}
@@ -571,7 +571,7 @@ box1Generate.addEventListener("click", function(){
     
     if(before[0].checked == true)
     {
-        css += `.${classname[0].value}:before{position:absolute;left: 0; top: 20px; right:0; transform: none; content:url(images/icons/${classname[0].value}.png);}
+        css += `.${classname[0].value}:before{position:absolute;left: 0; top: 20px; right:0; transform: none; content:url(images/icons/${classname[0].value}.webp);}
     `
     
     }
@@ -671,8 +671,8 @@ twoBoxesGenerate.addEventListener("click", function () {
     if(before[0].checked == true)
     {
         css += `    .two_boxes section:before{position:absolute;left: 0; top: 20px; right:0; transform: none;}
-        .two_boxes section.two_boxes_box1:before{content:url(images/icons/two_boxes_box1.png);}
-        .two_boxes section.two_boxes_box2:before{content:url(images/icons/two_boxes_box2.png);}
+        .two_boxes section.two_boxes_box1:before{content:url(images/icons/two_boxes_box1.webp);}
+        .two_boxes section.two_boxes_box2:before{content:url(images/icons/two_boxes_box2.webp);}
     `
     }
 
@@ -910,11 +910,11 @@ function section(classname, content) {
 function figure(src, alt) {
 
     if (alt == '') {
-        return `<figure><img src="<?php bloginfo('template_url');?>/images/` + src + `.jpg" alt="xxxxxxxxxxxxxxxxxx_ADD_ALT_HERE_xxxxxxxxxxxxxxxxxx"></figure>`;
+        return `<figure><img src="<?php bloginfo('template_url');?>/images/` + src + `.webp" alt="xxxxxxxxxxxxxxxxxx_ADD_ALT_HERE_xxxxxxxxxxxxxxxxxx"></figure>`;
     }
 
 
-    return `<figure><img src="<?php bloginfo('template_url');?>/images/` + src + `.jpg" alt="` + alt + `"></figure>`;
+    return `<figure><img src="<?php bloginfo('template_url');?>/images/` + src + `.webp" alt="` + alt + `"></figure>`;
 }
 
 
